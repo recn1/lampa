@@ -7,15 +7,29 @@ document.getElementById("booking-form").addEventListener("submit", function(even
     let name = document.getElementById("name").value.trim();
     let phone = document.getElementById("phone").value.trim();
 
+    // Ellenőrzések: Csak hétvégére lehessen foglalni
     if (dayOfWeek !== 6 && dayOfWeek !== 0) {
         alert("Csak hétvégére foglalhatsz időpontot! Kérlek, válassz szombati vagy vasárnapi dátumot.");
         return;
     }
 
+    // Cím mező ellenőrzése
     if (address === "") {
         alert("Kérlek, add meg a címet a házhoz kiszálláshoz.");
         return;
     }
+
+    // Email küldése az EmailJS segítségével
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        from_name: name,
+        phone_number: phone,
+        appointment_date: document.getElementById("date").value,
+        address: address
+    }, "YOUR_PUBLIC_KEY").then(function(response) {
+        console.log("Email sikeresen elküldve:", response);
+    }, function(error) {
+        console.error("Hiba történt az email küldésekor:", error);
+    });
 
     // Foglalás megerősítése felugró modal ablakban
     const confirmationModal = document.createElement("div");
