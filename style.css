@@ -1,3 +1,4 @@
+/* Alap stílusok */
 body {
     font-family: 'SF Pro Display', sans-serif;
     text-align: center;
@@ -7,24 +8,30 @@ body {
     padding: 0;
 }
 
+/* Fejléc */
 header {
-    padding: 50px 20px;
+    padding: 60px 20px;
     font-weight: 600;
+    background: linear-gradient(135deg, #007AFF, #0056B3);
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .title {
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-weight: bold;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    color: #777;
+    font-size: 1.4em;
+    color: #d4eaff;
 }
 
+/* Foglalási űrlap */
 .booking {
-    margin: 30px auto;
-    padding: 20px;
+    margin: 40px auto;
+    padding: 30px;
     background: white;
     width: 80%;
     max-width: 500px;
@@ -32,42 +39,58 @@ header {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Input mezők */
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: left;
 }
 
 label {
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 500;
 }
 
 input {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-top: 5px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #ccc;
+    font-size: 1.2em;
+    transition: 0.3s ease-in-out;
 }
 
+input:focus {
+    border-color: #007AFF;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(0, 122, 255, 0.3);
+}
+
+/* Gombok */
 .btn {
     width: 100%;
     background: linear-gradient(135deg, #007AFF, #0056B3);
     color: white;
-    padding: 12px;
+    padding: 14px;
     font-size: 1.2em;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
     opacity: 0.9;
+    transform: scale(1.02);
 }
 
+/* Lábléc */
 footer {
     margin-top: 40px;
-    padding: 20px;
+    padding: 25px;
     background-color: #f5f5f5;
     color: #666;
+    font-size: 1em;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
