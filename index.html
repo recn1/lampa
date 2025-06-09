@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rec Renewal – Fényszóró Polírozás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Fényszóró polírozás – Letisztult minőség</h1>
+        <p class="subtitle">Professzionális polírozás Budapesten, kizárólag hétvégén</p>
+    </header>
+
+    <section class="booking">
+        <h2>Foglalj időpontot</h2>
+        <form id="booking-form">
+            <div class="input-group">
+                <label for="name">Név:</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Telefonszám:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date">Válassz időpontot:</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="address">Cím:</label>
+                <input type="text" id="address" required placeholder="Utca, házszám, város">
+            </div>
+
+            <button type="submit" class="btn">Foglalás küldése</button>
+        </form>
+        <p id="confirmation-message" style="display:none;">Foglalás sikeresen elküldve!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rec Renewal – Prémium szolgáltatás.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
